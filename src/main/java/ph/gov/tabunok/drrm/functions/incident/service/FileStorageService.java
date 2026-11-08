@@ -14,5 +14,7 @@ public interface FileStorageService {
 
     StoredFile store(MultipartFile file, MediaKind kind);
 
+    String resolveUrl(String relativePath);
+
     void deleteQuietly(String relativePath);
 }
