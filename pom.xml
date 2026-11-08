@@ -30,6 +30,7 @@
 		<java.version>17</java.version>
 		<jjwt.version>0.12.6</jjwt.version>
 		<commons-math3.version>3.6.1</commons-math3.version>
+		<aws-sdk.version>2.31.18</aws-sdk.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -80,6 +81,11 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-math3</artifactId>
 			<version>${commons-math3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>${aws-sdk.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

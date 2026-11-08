@@ -213,7 +213,7 @@ public class IncidentServiceImpl implements IncidentService {
                 .reporterContact(me != null && me.isAdmin() ? reporter.getContactNumber() : null)
                 .reviewedByName(i.getReviewedBy() == null ? null : i.getReviewedBy().getFullName())
                 .media(i.getMedia().stream()
-                        .map(m -> new MediaDto(m.getId(), m.getKind(), "/uploads/" + m.getStoredPath(), m.getContentType()))
+                        .map(m -> new MediaDto(m.getId(), m.getKind(), storage.resolveUrl(m.getStoredPath()), m.getContentType()))
                         .toList())
                 .createdAt(i.getCreatedAt())
                 .updatedAt(i.getUpdatedAt())
