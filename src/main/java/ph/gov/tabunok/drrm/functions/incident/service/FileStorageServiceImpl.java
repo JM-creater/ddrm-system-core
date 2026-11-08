@@ -76,7 +76,6 @@ public class FileStorageServiceImpl implements FileStorageService {
                     AwsBasicCredentials.create(s3.getAccessKey().trim(), s3.getSecretKey().trim()));
             S3Configuration serviceConfig = S3Configuration.builder()
                     .pathStyleAccessEnabled(s3.isPathStyleAccess())
-                    .checksumValidationEnabled(false)
                     .build();
 
             this.s3Client = S3Client.builder()
